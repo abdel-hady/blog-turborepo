@@ -9,21 +9,24 @@ type Props = {
 };
 
 export default async function Home({ searchParams }: Props) {
-  const { page } = await searchParams;
-  const { totalPosts, posts } = await fetchPosts({
-    page: page ? +page : undefined,
-  });
-  const session = await getSession();
-  console.log("%c", "color: green; font-weight: bold;", { session });
+  // const { page } = await searchParams;
+  // const { totalPosts, posts } = await fetchPosts({
+  //   page: page ? +page : undefined,
+  // });
+  // const session = await getSession();
+  // console.log("%c", "color: green; font-weight: bold;", { session });
 
   return (
-    <main>
-      <Hero />
-      <Posts
-        posts={posts}
-        currentPage={page ? +page : 1}
-        totalPages={Math.ceil(totalPosts / DEFAULT_PAGE_SIZE)}
-      />
-    </main>
+    // <main>
+    //   <Hero />
+    //   <Posts
+    //     posts={posts}
+    //     currentPage={page ? +page : 1}
+    //     totalPages={Math.ceil(totalPosts / DEFAULT_PAGE_SIZE)}
+    //   />
+    // </main>
+    <div>
+      hi guys
+    </div>
   );
 }
